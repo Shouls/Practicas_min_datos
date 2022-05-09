@@ -11,7 +11,7 @@ def get_cmap(n, name="hsv"):
     return plt.cm.get_cmap(name, n)
 
 def scatter_group_by(archivo: str, df: pd.DataFrame, x_column: str, y_column: str, label_column: str):
-    fig, ax = plt.subplots(figsize=(10, 8))
+    fig, ax = plt.subplots(figsize=(15, 10))
     labels = pd.unique(df[label_column])
     cmap = get_cmap(len(labels) + 1)
     for i, label in enumerate(labels):
